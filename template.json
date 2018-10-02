@@ -1,0 +1,8 @@
+{
+  "fruits": ["Banana", "Apple"],
+  "burger": ["Double Cheese", "Whopper"],
+  "colors": {
+    "Banana": "yellow",
+    "Apple": "green"
+  }
+}
