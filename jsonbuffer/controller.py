@@ -28,3 +28,12 @@ def update_data(path):
         return 'OK'
     except KeyError:
         abort(404)
+
+@app.route('/', defaults={'path': ''}, methods=['DELETE'])
+@app.route('/<path:path>', methods=['DELETE'])
+def delete_data(path):
+    try:
+        ds.delete(path)
+        return 'OK'
+    except KeyError:
+        abort(404)

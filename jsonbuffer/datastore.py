@@ -33,6 +33,14 @@ class DataStore:
             dpath.set(self.data, path, d)
         self.save()
 
+    def delete(self, path=''):
+        if path == '':
+            self.data = {}
+        else:
+            # throws KeyError
+            dpath.delete(self.data, path)
+        self.save()
+
     def save(self):
         if self.store_to:
             with open(self.store_to, 'w') as f:
